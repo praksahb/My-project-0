@@ -39,12 +39,12 @@ InputManager:
     joyNum: 0
   - serializedVersion: 3
     m_Name: Fire1
-    descriptiveName: 
+    descriptiveName: Fire1 button using as break button for movements
     descriptiveNegativeName: 
     negativeButton: 
-    positiveButton: left ctrl
+    positiveButton: space
     altNegativeButton: 
-    altPositiveButton: mouse 0
+    altPositiveButton: 
     gravity: 1000
     dead: 0.001
     sensitivity: 1000
