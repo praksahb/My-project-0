@@ -1,19 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rigidbody2d;
 
-    public GameObject gameWonPanel;
-
-    public GameObject gameLostPanel;
+    public GameObject GameWonPanel;
 
     public float speed;
 
-    private bool isGameOver = false;
+    private bool isGameWon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +21,8 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (isGameOver)
+        if (isGameWon)
         {
-            rigidbody2d.velocity = new Vector2(0f, 0f);
             return;
         }
 
@@ -54,24 +50,12 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         {
-            if (other.tag == "Door")
+            if(other.tag == "Door")
             {
                 Debug.Log("Level Completed");
-                gameWonPanel.SetActive(true);
-                isGameOver = true;
-            }
-            else if (other.tag == "Enemy")
-            {
-                Debug.Log("Level Lost");
-                gameLostPanel.SetActive(true);
-                isGameOver = true;
+                GameWonPanel.SetActive(true);
+                isGameWon = true;
             }
         }
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("button clicked");
     }
 }
