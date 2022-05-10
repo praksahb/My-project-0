@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rigidbody2d;
 
+<<<<<<< HEAD
     public GameObject gameWonPanel;
 
     public GameObject gameLostPanel;
@@ -15,6 +16,10 @@ public class PlayerController : MonoBehaviour
 
     private bool isGameOver = false;
 
+=======
+    public float speed;
+
+>>>>>>> parent of e3f879d (added GameWon ui screen)
     // Start is called before the first frame update
     void Start()
     {
@@ -24,12 +29,15 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if (isGameOver)
         {
             rigidbody2d.velocity = new Vector2(0f, 0f);
             return;
         }
 
+=======
+>>>>>>> parent of e3f879d (added GameWon ui screen)
         if (Input.GetAxis("Horizontal") > 0)    //positive on x-axis 
         {
             rigidbody2d.velocity = new Vector2(speed, 0f);
@@ -54,6 +62,7 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other) {
         {
+<<<<<<< HEAD
             if (other.tag == "Door")
             {
                 Debug.Log("Level Completed");
@@ -66,6 +75,10 @@ public class PlayerController : MonoBehaviour
                 gameLostPanel.SetActive(true);
                 isGameOver = true;
             }
+=======
+            if(other.tag == "Door")
+            Debug.Log("Level Completed");
+>>>>>>> parent of e3f879d (added GameWon ui screen)
         }
     }
 
