@@ -8,9 +8,13 @@ public class PlayerController : MonoBehaviour
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     public GameObject gameWonPanel;
 
     public GameObject gameLostPanel;
+=======
+    public GameObject GameWonPanel;
+>>>>>>> parent of 4e45434 (added game lost ui screen)
 =======
     public GameObject GameWonPanel;
 >>>>>>> parent of 4e45434 (added game lost ui screen)
@@ -34,7 +38,11 @@ public class PlayerController : MonoBehaviour
     {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isGameOver)
+=======
+        if (isGameWon)
+>>>>>>> parent of 4e45434 (added game lost ui screen)
 =======
         if (isGameWon)
 >>>>>>> parent of 4e45434 (added game lost ui screen)
@@ -70,7 +78,11 @@ public class PlayerController : MonoBehaviour
         {
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (other.tag == "Door")
+=======
+            if(other.tag == "Door")
+>>>>>>> parent of 4e45434 (added game lost ui screen)
 =======
             if(other.tag == "Door")
 >>>>>>> parent of 4e45434 (added game lost ui screen)
