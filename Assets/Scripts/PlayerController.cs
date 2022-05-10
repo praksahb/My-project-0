@@ -1,20 +1,23 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
     public Rigidbody2D rigidbody2d;
 
 <<<<<<< HEAD
+<<<<<<< HEAD
     public GameObject gameWonPanel;
 
     public GameObject gameLostPanel;
+=======
+    public GameObject GameWonPanel;
+>>>>>>> parent of 4e45434 (added game lost ui screen)
 
     public float speed;
 
-    private bool isGameOver = false;
+    private bool isGameWon = false;
 
 =======
     public float speed;
@@ -30,9 +33,12 @@ public class PlayerController : MonoBehaviour
     void Update()
     {
 <<<<<<< HEAD
+<<<<<<< HEAD
         if (isGameOver)
+=======
+        if (isGameWon)
+>>>>>>> parent of 4e45434 (added game lost ui screen)
         {
-            rigidbody2d.velocity = new Vector2(0f, 0f);
             return;
         }
 
@@ -63,28 +69,20 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         {
 <<<<<<< HEAD
+<<<<<<< HEAD
             if (other.tag == "Door")
+=======
+            if(other.tag == "Door")
+>>>>>>> parent of 4e45434 (added game lost ui screen)
             {
                 Debug.Log("Level Completed");
-                gameWonPanel.SetActive(true);
-                isGameOver = true;
-            }
-            else if (other.tag == "Enemy")
-            {
-                Debug.Log("Level Lost");
-                gameLostPanel.SetActive(true);
-                isGameOver = true;
+                GameWonPanel.SetActive(true);
+                isGameWon = true;
             }
 =======
             if(other.tag == "Door")
             Debug.Log("Level Completed");
 >>>>>>> parent of e3f879d (added GameWon ui screen)
         }
-    }
-
-    public void RestartGame()
-    {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-        Debug.Log("button clicked");
     }
 }
